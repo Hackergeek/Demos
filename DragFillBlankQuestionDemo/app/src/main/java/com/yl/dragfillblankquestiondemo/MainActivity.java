@@ -1,7 +1,7 @@
 package com.yl.dragfillblankquestiondemo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+
         String content = "纷纷扬扬的________下了半尺多厚。天地间________的一片。我顺着________工地走了四十多公里，" +
                 "只听见各种机器的吼声，可是看不见人影，也看不见工点。一进灵官峡，我就心里发慌。";
 
@@ -55,5 +56,11 @@ public class MainActivity extends AppCompatActivity {
         rangeList.add(new AnswerRange(38, 46));
 
         dfbvContent.setData(content, optionList, rangeList);
+
+
+
+
+
+
     }
 }

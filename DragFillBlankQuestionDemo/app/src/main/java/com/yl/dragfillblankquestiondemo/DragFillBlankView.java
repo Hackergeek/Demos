@@ -14,6 +14,7 @@ import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
@@ -295,6 +296,7 @@ public class DragFillBlankView extends RelativeLayout implements View.OnDragList
                 return true;
 
             case DragEvent.ACTION_DRAG_ENDED: // 拖拽完成
+                Log.d(TAG, "onDrag: ");
                 if (!isFillBlank) {
                     llOption.getChildAt(optionPosition).setVisibility(VISIBLE);
                 } else {
@@ -308,6 +310,8 @@ public class DragFillBlankView extends RelativeLayout implements View.OnDragList
 
         return false;
     }
+
+    private static final String TAG = "DragFillBlankView";
 
     /**
      * 填写答案
